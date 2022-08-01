@@ -1,0 +1,247 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100%;
+}
+
+ul{
+    display: flex;
+    list-style-type: none;
+    row-gap: 200px;
+    margin-top: 70px;
+    margin-bottom: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+}
+
+ul li a{
+    text-decoration: none;
+    color:black;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+ul li a:hover{
+    background-color: salmon;
+}
+
+.menuDeInicio{
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    padding: 10px 1px 5px 10px;
+}
+
+.footerPagina{
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3.2rem;
+    min-height: 100%;
+    background: whitesmoke;
+
+}
+
+.gridContainer > * {
+    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+}
+.header{
+    font-size: 200px;
+    margin-top: 50px;
+
+}
+
+.header:hover{
+    color: tomato;
+}
+
+
+.header{
+    grid-area: header;
+    background-color: darkolivegreen;
+}
+
+.nav{
+    grid-area: nav;
+    background-color: darkkhaki;
+}
+
+.main{
+    grid-area: main;
+    background-image: image url(/images/blancas\ fondo\ verde.jpg);
+}
+
+.side{
+    grid-area: side;
+    background-color: tomato;
+    font-size: 100px;
+    font-size: 230px;
+}
+
+.footer{
+    grid-area: footer;
+    background-color: slategrey;
+}
+
+.gridContainer{
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "main"
+    "side"
+    "footer";
+}
+
+
+/*#imagen{
+    background-image: url(/images/verde\ con\ plantas.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: auto;
+}*/
+
+div{
+    background: whitesmoke;
+    width: auto;
+}
+
+img{
+    background:rgba(0, 0, 0, 0.75);
+    width: 50%;
+}
+
+#container{
+    margin: 150px 150pxpx;
+    height: 200px;
+}
+table{
+    background-color: cadetblue;
+    text-align: left;
+    width: 100%;
+    text-align: center;
+    border-radius: 15px;
+}
+
+#textoContacto{
+    color:black;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 25px;
+}
+
+.form-register{
+    width: 600px;
+    height: 800px;
+    padding: 30px;
+    margin: auto;
+    margin-top: 15px;
+    border-radius: 4px;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    margin-bottom: 30px;
+    text-align: center;
+
+}
+
+.form-register h4{
+    font-size: 50%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.controls{
+    width: 100%;
+    background: whitesmoke;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #278562 ;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+
+.form-register p{
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+}
+
+.form-register a:hover{
+    color: darkkhaki;
+    text-decoration: underline;
+}
+
+.form-register .botons{
+    width: 100%;
+    background: salmon;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+}
+
+#principal{
+    width: 200px;
+    height: 3000px;
+    background: antiquewhite;
+    animation-name:mianimacion;
+    animation-duration: 15s;
+    animation-delay: 1.5s;
+}
+
+@keyframes mianimacion {
+    0% {background: antiquewhite;}
+    25% {background: red;}
+    50% {background: cadetblue ;}
+    75%{background: yellow;}
+    100% { background: tomato;}
+}
+
+@media (min-width: 300px) {
+    .gridContainer {
+        grid-template-areas: 
+    "header"
+    "nav"
+    "main"
+    "side"
+    "footer";
+    }
+}
+
+
+@media (min-width: 600px) {
+    .gridContainer {
+        grid-template-columns: 200px auto;
+        grid-template-rows: 100px 50px auto 100px;
+        grid-template-areas: 
+            "header header"
+            "nav nav"
+            "side main"
+            "footer footer";
+    }
+}
+
+@media (min-width: 900px) {
+    .gridContainer {
+        grid-template-columns: 200px auto 200px;
+        grid-template-rows: 300px auto 200px;
+        grid-template-areas: 
+            "header header header"
+            "nav main side"
+            "footer footer footer";
+    }
+}
+
